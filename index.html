@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <link rel="icon" href="/favicon.ico">
+            <title>设计轮播</title>
+        </head>
+        <body>
+            <div id="app">
+                <div class="big-box">
+                    <div class="img-box">
+                        <div class="show-box" :style="{'transform':'translateX('+translate+'px,'transition':tsion?'all 0.5s':'none')'}">
+                            <img src="./img/1.jpg" alt="">
+                            <img v-for ='(item,index) in src':src='item' alt="">
+                            <img src="./img/2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="arrowhead-box" >
+                        <span @click='last'></span>
+                        <span @click='next'></span>
+                    </div>
+                    <div class="swiper-boxs" ref="swiper">
+                        <span v-for='(item,index) in src'></span>
+                    </div>
+                </div>
+
+            </div>
+            <script src="/js/vue.js"></script>
+            <script src="/js/index.js"></script>
+        </body>
+    </html>
